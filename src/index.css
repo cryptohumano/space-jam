@@ -1,0 +1,18 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Unbounded';
+  src: url('./assets/fonts/Unbounded/Unbounded-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Unbounded';
+  src: url('./assets/fonts/Unbounded/Unbounded-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: bold;
+}
