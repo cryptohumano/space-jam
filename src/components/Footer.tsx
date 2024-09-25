@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
     >
       <div className="container mx-auto py-6 px-4 flex flex-col md:flex-row justify-between items-center">
         <p className="mb-4 md:mb-0">
-          © {new Date().getFullYear()} Colectivo de Rendición de Cuentas. Todos los derechos
+          © {new Date().getFullYear()} Space-Jam Collective. Todos los derechos
           reservados.
         </p>
         <div className="flex space-x-4">

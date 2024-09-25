@@ -13,7 +13,7 @@ const Header: React.FC = () => {
     >
       <div className="container mx-auto flex justify-between items-center py-4 px-4">
         <Link to="/" className="text-2xl font-unbounded">
-          Rendición de Cuentas
+          Space-Jam Collective
         </Link>
         <nav>
           <ul className="flex space-x-6">
