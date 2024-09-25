@@ -1,9 +1,10 @@
-// src/components/Header.tsx
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const Header: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <motion.header
       className="bg-polkadot-purple text-white shadow"
@@ -12,11 +13,30 @@ const Header: React.FC = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="container mx-auto flex justify-between items-center py-4 px-4">
-        <Link to="/" className="text-2xl font-unbounded">
+        <Link to="/" className="text-2xl font-unbounded md:text-3xl">
           Space-Jam Collective
         </Link>
-        <nav>
-          <ul className="flex space-x-6">
+        <button
+          className="md:hidden text-white focus:outline-none"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+        <nav className={`${isOpen ? 'block' : 'hidden'} md:flex md:items-center md:space-x-6`}>
+          <ul className="md:flex md:space-x-6">
             <li>
               <motion.div
                 whileHover={{ scale: 1.1 }}
@@ -27,8 +47,8 @@ const Header: React.FC = () => {
                   to="/"
                   className={({ isActive }) =>
                     isActive
-                      ? 'underline text-kusama-yellow'
-                      : 'hover:text-kusama-yellow'
+                      ? 'underline text-kusama-yellow block py-2'
+                      : 'hover:text-kusama-yellow block py-2'
                   }
                   end
                 >
@@ -46,8 +66,8 @@ const Header: React.FC = () => {
                   to="/about"
                   className={({ isActive }) =>
                     isActive
-                      ? 'underline text-kusama-yellow'
-                      : 'hover:text-kusama-yellow'
+                      ? 'underline text-kusama-yellow block py-2'
+                      : 'hover:text-kusama-yellow block py-2'
                   }
                 >
                   Sobre Nosotros
@@ -64,8 +84,8 @@ const Header: React.FC = () => {
                   to="/proposals"
                   className={({ isActive }) =>
                     isActive
-                      ? 'underline text-kusama-yellow'
-                      : 'hover:text-kusama-yellow'
+                      ? 'underline text-kusama-yellow block py-2'
+                      : 'hover:text-kusama-yellow block py-2'
                   }
                 >
                   Propuestas
@@ -82,8 +102,8 @@ const Header: React.FC = () => {
                   to="/faqs"
                   className={({ isActive }) =>
                     isActive
-                      ? 'underline text-kusama-yellow'
-                      : 'hover:text-kusama-yellow'
+                      ? 'underline text-kusama-yellow block py-2'
+                      : 'hover:text-kusama-yellow block py-2'
                   }
                 >
                   FAQs
@@ -100,8 +120,8 @@ const Header: React.FC = () => {
                   to="/contact"
                   className={({ isActive }) =>
                     isActive
-                      ? 'underline text-kusama-yellow'
-                      : 'hover:text-kusama-yellow'
+                      ? 'underline text-kusama-yellow block py-2'
+                      : 'hover:text-kusama-yellow block py-2'
                   }
                 >
                   Contacto
